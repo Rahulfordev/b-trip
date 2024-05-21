@@ -10,14 +10,14 @@ import Tour from "../../public/image/hero-section/Tur.png";
 
 const HeroSection = () => {
   return (
-    <div>
+    <div className="relative">
       <div className="bg-[url('/image/hero-section/hero-bg.png')] bg-cover bg-center bg-no-repeat h-[632px] w-full">
         <div className="max-w-[1292px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pb-14 pt-8">
-            <p className="text-[30px] md:text-[64px] font-semibold text-white">
+            <p className="text-[30px] md:text-[64px] font-semibold text-white leading-tight">
               Welcome
             </p>
-            <p className="text-[30px] md:text-[64px] font-semibold text-white">
+            <p className="text-[30px] md:text-[64px] font-semibold text-white leading-tight">
               to Btrip
             </p>
           </div>
@@ -28,13 +28,13 @@ const HeroSection = () => {
                 <span className="text-sm font-bold text-[#04669F]">Flight</span>
               </button>
               <button className="flex flex-col items-center gap-1 pt-5 pb-[10px] pl-[22px] pr-[18px]">
-                <Image src={Hotel} alt="Flight" />
-                <span className="text-sm  font-bold text-[#04669F]">
+                <Image src={Hotel} alt="Hotel" />
+                <span className="text-sm font-bold text-[#04669F]">
                   Haj & Umrah
                 </span>
               </button>
               <button className="flex flex-col items-center gap-1 pt-5 pb-[10px] pl-[22px] pr-[18px]">
-                <Image src={Tour} alt="Flight" />
+                <Image src={Tour} alt="Tour" />
                 <span className="text-sm font-bold text-[#04669F]">Tour</span>
               </button>
             </div>
@@ -49,11 +49,11 @@ const HeroSection = () => {
                       viewBox="0 0 16 16"
                       fill="none"
                     >
-                      <g clip-path="url(#clip0_366_3107)">
+                      <g clipPath="url(#clip0_366_3107)">
                         <path
                           d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8Z"
                           stroke="#04669F"
-                          stroke-width="2"
+                          strokeWidth="2"
                         />
                         <path
                           d="M12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8Z"
@@ -67,7 +67,7 @@ const HeroSection = () => {
                       </defs>
                     </svg>
                     <span className="text-sm font-semibold text-[#04669F]">
-                      One Ways
+                      One Way
                     </span>
                   </button>
                   <button className="flex items-center gap-2 opacity-30">
@@ -78,11 +78,11 @@ const HeroSection = () => {
                       viewBox="0 0 16 16"
                       fill="none"
                     >
-                      <g clip-path="url(#clip0_366_3107)">
+                      <g clipPath="url(#clip0_366_3107)">
                         <path
                           d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8Z"
                           stroke="#1C3C6B"
-                          stroke-width="2"
+                          strokeWidth="2"
                         />
                         <path
                           d="M12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8Z"
@@ -96,7 +96,7 @@ const HeroSection = () => {
                       </defs>
                     </svg>
                     <span className="text-sm font-semibold text-[#1C3C6B]">
-                      Round Way
+                      Round Trip
                     </span>
                   </button>
                   <button className="flex items-center gap-2 opacity-30">
@@ -107,11 +107,11 @@ const HeroSection = () => {
                       viewBox="0 0 16 16"
                       fill="none"
                     >
-                      <g clip-path="url(#clip0_366_3107)">
+                      <g clipPath="url(#clip0_366_3107)">
                         <path
                           d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8Z"
                           stroke="#1C3C6B"
-                          stroke-width="2"
+                          strokeWidth="2"
                         />
                         <path
                           d="M12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8Z"
@@ -130,34 +130,38 @@ const HeroSection = () => {
                   </button>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-3">
-                  <div className="flex relative gap-2">
-                    <div className="pl-2 pr-2 py-2 rounded-tl-[10px] rounded-tr-none rounded-br-[10px] rounded-bl-none border w-full lg:w-[253px]">
-                      <p className="text-[#04669F] font-normal text-xs">From</p>
-                      <h3 className="text-[#04669F] font-semibold text-xs sm:text-sm md:text-base">
-                        Dhaka
-                      </h3>
-                      <p className="text-[#04669F] font-normal text-xs overflow-hidden text-ellipsis whitespace-nowrap max-w-[130px]">
-                        DAC, Hazrat Shahjalal International Ai
-                      </p>
-                    </div>
-                    <div className="absolute left-[132px] top-5">
-                      <button className="bg-white border w-10 h-10 flex items-center flex-col justify-center rounded-full">
-                        <FaArrowLeftLong className="text-xs text-[#1e2258]" />
-                        <FaArrowRightLong className="text-xs text-[#1e2258]" />
-                      </button>
-                    </div>
-                    <div className="pl-5 pr-2 sm:pr-4 py-2 rounded-tl-[10px] rounded-tr-none rounded-br-[10px] rounded-bl-none border w-full lg:w-[253px]">
-                      <p className="text-[#04669F] font-normal text-xs">To</p>
-                      <h3 className="text-[#04669F] font-semibold text-xs sm:text-sm md:text-base">
-                        Cox's Bazar
-                      </h3>
-                      <p className="text-[#04669F] font-normal text-xs overflow-hidden text-ellipsis whitespace-nowrap max-w-[108px]">
-                        CXB, Cox's Bazar Airport
-                      </p>
+                  <div className="flex gap-2 flex-grow">
+                    <div className="relative flex-grow">
+                      <div className="pl-2 pr-2 py-2 rounded-tl-[10px] rounded-tr-none rounded-br-[10px] rounded-bl-none border w-full md:w-[253px]">
+                        <p className="text-[#04669F] font-normal text-xs">
+                          From
+                        </p>
+                        <h3 className="text-[#04669F] font-semibold text-xs sm:text-sm md:text-base">
+                          Dhaka
+                        </h3>
+                        <p className="text-[#04669F] font-normal text-xs overflow-hidden text-ellipsis whitespace-nowrap max-w-[130px]">
+                          DAC, Hazrat Shahjalal International Ai
+                        </p>
+                      </div>
+                      <div className="absolute left-[135px] md:left-[235px] top-4 lg:top-5">
+                        <button className="bg-white border w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full">
+                          <FaArrowLeftLong className="text-[10px] md:text-xs text-[#1e2258]" />
+                          <FaArrowRightLong className="text-[10px] md:text-xs text-[#1e2258]" />
+                        </button>
+                      </div>
+                      <div className="pl-5 pr-2 sm:pr-4 py-2 rounded-tl-[10px] rounded-tr-none rounded-br-[10px] rounded-bl-none border w-full md:w-[253px]">
+                        <p className="text-[#04669F] font-normal text-xs">To</p>
+                        <h3 className="text-[#04669F] font-semibold text-xs sm:text-sm md:text-base">
+                          Cox's Bazar
+                        </h3>
+                        <p className="text-[#04669F] font-normal text-xs overflow-hidden text-ellipsis whitespace-nowrap max-w-[108px]">
+                          CXB, Cox's Bazar Airport
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex">
-                    <div className="rounded-tl-[10px] rounded-tr-none rounded-br-none rounded-bl-none border border-r-[0px] px-4 py-2 w-full sm:max-w-[157px]">
+                  <div className="flex flex-grow">
+                    <div className="rounded-tl-[10px] rounded-tr-none rounded-br-none rounded-bl-none border border-r-[0px] px-4 py-2 w-full md:w-[157px]">
                       <p className="text-[#04669F] font-semibold text-xs sm:text-sm md:text-base">
                         Journey Date
                       </p>
@@ -169,26 +173,27 @@ const HeroSection = () => {
                         Thursday
                       </p>
                     </div>
-                    <div className="rounded-tl-none rounded-tr-none rounded-br-[10px] rounded-bl-none border px-4 py-2 w-full sm:max-w-[157px]">
+                    <div className="rounded-tl-none rounded-tr-none rounded-br-[10px] rounded-bl-none border px-4 py-2 w-full md:w-[157px]">
                       <p className="font-semibold text-xs sm:text-sm md:text-base">
                         Return Date
                       </p>
-
                       <p className="text-xs font-normal text-[#04669F] mt-2">
                         Save more on return flight
                       </p>
                     </div>
                   </div>
-                  <div className="rounded-tl-[10px] rounded-tr-none rounded-br-[10px] rounded-bl-none border px-4 py-2 w-full sm:w-[200px]">
-                    <p className="text-[#04669F]">Traveler, Class</p>
-                    <h3 className="text-[#04669F] font-bold text-lg">
-                      1 Traveler
-                    </h3>
-                    <p className="text-xs font-normal text-[#04669F]">
-                      Economy
-                    </p>
+                  <div className="flex-grow">
+                    <div className="rounded-tl-[10px] rounded-tr-none rounded-br-[10px] rounded-bl-none border px-4 py-2 w-full md:w-[200px]">
+                      <p className="text-[#04669F]">Traveler, Class</p>
+                      <h3 className="text-[#04669F] font-bold text-lg">
+                        1 Traveler
+                      </h3>
+                      <p className="text-xs font-normal text-[#04669F]">
+                        Economy
+                      </p>
+                    </div>
                   </div>
-                  <button className="bg-[#04669F] ml-2 text-white w-full sm:max-w-[155px] font-bold text-lg rounded-tl-[10px] py-2 mb-2 sm:mb-0 rounded-tr-none rounded-br-[10px] rounded-bl-none ">
+                  <button className="bg-[#04669F] ml-2 text-white w-full sm:max-w-[155px] font-bold text-lg rounded-tl-[10px] py-2 mb-2 sm:mb-0 rounded-tr-none rounded-br-[10px] rounded-bl-none">
                     Search
                   </button>
                 </div>
