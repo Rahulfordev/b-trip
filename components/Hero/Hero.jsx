@@ -13,7 +13,7 @@ const HeroSection = () => {
     <div>
       <div className="bg-[url('/image/hero-section/hero-bg.png')] bg-cover bg-center bg-no-repeat h-[632px] w-full">
         <div className="max-w-[1292px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="pb-14 pt-8">
+          <div className="pb-14 lg:pb-32 pt-8">
             <p className="text-[30px] sm:text-[35px] md:text-[45px] lg:text-[64px] font-semibold text-white">
               Welcome
             </p>
