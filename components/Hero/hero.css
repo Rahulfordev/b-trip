@@ -1,0 +1,153 @@
+.bar {
+  display: flex;
+}
+
+.flight-search div.location {
+  flex-basis: calc(25% - 10px);
+  margin-right: 10px;
+  max-width: calc(25% - 10px);
+}
+
+.bar div.search-box {
+  border: 1px solid #dbdde0;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 8px 15px;
+  position: relative;
+}
+
+.bar div.search-box .label {
+  display: block;
+  font-size: 0.8571428571rem;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.search-box span.label {
+  color: #04669f;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.bar div.search-box .value {
+  color: #04669f;
+  font-size: 1.2857142857rem;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.bar div.search-box .value + .sub-value {
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.bar div.search-box .value span {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.bar div.search-box .sub-value {
+  display: block;
+  font-size: 0.7857142857rem;
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.search-box span.sub-value {
+  color: #5d6974;
+}
+
+.bar div.search-box.has-swapper {
+  padding-left: 25px;
+}
+
+.bar div.search-box .swapper {
+  background-image: url(/image/hero-section/swap.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  border-radius: 50%;
+  height: 40px;
+  left: -5px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+}
+
+.flight-search div.date.depart {
+  border-radius: 10px 0 0 10px;
+}
+.flight-search div.date {
+  flex-basis: 15%;
+}
+
+.flight-search div.date.return {
+  border-left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.bar div.search-box .sub-value.inline-style {
+  white-space: normal;
+}
+
+.flight-search div.traveler {
+  flex-basis: calc(20% - 10px);
+  margin-left: 10px;
+}
+
+/* responsive */
+@media only screen and (max-width: 991px) {
+  .bar {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .bar div.search-box {
+    padding: 8px 10px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .flight-search div.from,
+  .flight-search div.to {
+    flex-basis: calc(50% - 5px);
+    max-width: calc(50% - 5px);
+    width: calc(50% - 5px);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .bar div.search-box .value {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .flight-search div.to {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .flight-search div.date.depart,
+  .flight-search div.date.return {
+    flex-basis: 50%;
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .flight-search div.traveler {
+    flex-basis: 100%;
+    margin-left: 0;
+    width: 100%;
+  }
+}

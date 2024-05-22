@@ -25,11 +25,11 @@ const PopularFlight = () => {
             to explore local destinations or global marvels around Asia, Europe,
             America, Canada or anywhere
           </p>
-          <div className="pb-[30px] flex gap-x-3">
-            <button className="text-white bg-[#04669F] px-9 py-4 rounded-[32px] text-sm font-semibold">
+          <div className="pb-[30px] flex gap-x-2 sm:gap-x-3">
+            <button className="text-white bg-[#04669F] px-8 py-[14px] sm:px-9 sm:py-4 rounded-[32px] text-xs sm:text-sm font-medium sm:font-semibold">
               Domestic
             </button>
-            <button className="text-[#5A6573] bg-[#EBF0F5] px-8 py-4 rounded-[32px] text-sm font-semibold">
+            <button className="text-[#5A6573] bg-[#EBF0F5] px-8 py-[14px] sm:px-9 sm:py-4 rounded-[32px] text-xs sm:text-sm font-medium sm:font-semibold">
               International
             </button>
           </div>

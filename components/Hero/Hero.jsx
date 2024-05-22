@@ -2,11 +2,11 @@
 import Image from "next/image";
 import React from "react";
 
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-
 import Flight from "../../public/image/hero-section/Flight.png";
 import Hotel from "../../public/image/hero-section/Hotel.png";
 import Tour from "../../public/image/hero-section/Tur.png";
+
+import "./hero.css";
 
 const HeroSection = () => {
   return (
@@ -14,16 +14,16 @@ const HeroSection = () => {
       <div className="bg-[url('/image/hero-section/hero-bg.png')] bg-cover bg-center bg-no-repeat h-[632px] w-full">
         <div className="max-w-[1292px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pb-14 pt-8">
-            <p className="text-[30px] md:text-[64px] font-semibold text-white">
+            <p className="text-[30px] sm:text-[35px] md:text-[45px] lg:text-[64px] font-semibold text-white">
               Welcome
             </p>
-            <p className="text-[30px] md:text-[64px] font-semibold text-white">
+            <p className="text-[30px] sm:text-[35px] md:text-[45px] lg:text-[64px] font-semibold text-white">
               to Btrip
             </p>
           </div>
           <div className="relative">
-            <div className="max-w-[474px] h-[68px] bg-white rounded-[10px] px-[27px] flex items-center justify-between shadow-custom-blue absolute top-[-45px]">
-              <button className="flex flex-col items-center gap-1 pt-5 pb-[10px] pl-[22px] pr-[18px] border-b-4 border-[#FC9A16]">
+            <div className="w-full sm:max-w-[474px] h-[68px] bg-white rounded-[10px] px-[27px] flex items-center justify-between shadow-custom-blue absolute top-[-45px]">
+              <button className="flex flex-col items-center gap-1 pt-5 pb-[10px] pl-[22px] pr-[18px] border-b-2 border-[#FC9A16]">
                 <Image src={Flight} alt="Flight" />
                 <span className="text-sm font-bold text-[#04669F]">Flight</span>
               </button>
@@ -38,8 +38,8 @@ const HeroSection = () => {
                 <span className="text-sm font-bold text-[#04669F]">Tour</span>
               </button>
             </div>
-            <div className="bg-white max-w-[1292px] h-full lg:h-[191px] rounded-tl-none rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px] px-4">
-              <div className="pt-12">
+            <div className="bg-white max-w-[1292px] h-full pb-4 md:pb-5 lg:pb-6 rounded-tl-none rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px] px-4">
+              <div className="pt-10">
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                   <button className="flex items-center gap-2">
                     <svg
@@ -129,68 +129,41 @@ const HeroSection = () => {
                     </span>
                   </button>
                 </div>
-                <div className="flex flex-wrap gap-2 mt-3">
-                  <div className="flex relative gap-2">
-                    <div className="pl-2 pr-2 py-2 rounded-tl-[10px] rounded-tr-none rounded-br-[10px] rounded-bl-none border w-full lg:w-[253px]">
-                      <p className="text-[#04669F] font-normal text-xs">From</p>
-                      <h3 className="text-[#04669F] font-semibold text-xs sm:text-sm md:text-base">
-                        Dhaka
-                      </h3>
-                      <p className="text-[#04669F] font-normal text-xs overflow-hidden text-ellipsis whitespace-nowrap max-w-[130px]">
-                        DAC, Hazrat Shahjalal International Ai
-                      </p>
-                    </div>
-                    <div className="absolute left-[132px] top-5">
-                      <button className="bg-white border w-10 h-10 flex items-center flex-col justify-center rounded-full">
-                        <FaArrowLeftLong className="text-xs text-[#1e2258]" />
-                        <FaArrowRightLong className="text-xs text-[#1e2258]" />
-                      </button>
-                    </div>
-                    <div className="pl-5 pr-2 sm:pr-4 py-2 rounded-tl-[10px] rounded-tr-none rounded-br-[10px] rounded-bl-none border w-full lg:w-[253px]">
-                      <p className="text-[#04669F] font-normal text-xs">To</p>
-                      <h3 className="text-[#04669F] font-semibold text-xs sm:text-sm md:text-base">
-                        Cox's Bazar
-                      </h3>
-                      <p className="text-[#04669F] font-normal text-xs overflow-hidden text-ellipsis whitespace-nowrap max-w-[108px]">
-                        CXB, Cox's Bazar Airport
-                      </p>
-                    </div>
+                <div class="flight-search bar pt-2">
+                  <div class="search-box location from">
+                    <span class="label">From</span>
+                    <div class="value">Dhaka</div>
+                    <span class="sub-value">
+                      DAC, Hazrat Shahjalal International Airport
+                    </span>
                   </div>
-                  <div className="flex">
-                    <div className="rounded-tl-[10px] rounded-tr-none rounded-br-none rounded-bl-none border border-r-[0px] px-4 py-2 w-full sm:max-w-[157px]">
-                      <p className="text-[#04669F] font-semibold text-xs sm:text-sm md:text-base">
-                        Journey Date
-                      </p>
-                      <h3 className="text-[#04669F] font-semibold text-xs sm:text-sm md:text-base">
-                        04
-                        <span className="text-xs font-normal pl-1">Apr'24</span>
-                      </h3>
-                      <p className="text-xs font-normal text-[#04669F]">
-                        Thursday
-                      </p>
-                    </div>
-                    <div className="rounded-tl-none rounded-tr-none rounded-br-[10px] rounded-bl-none border px-4 py-2 w-full sm:max-w-[157px]">
-                      <p className="font-semibold text-xs sm:text-sm md:text-base">
-                        Return Date
-                      </p>
-
-                      <p className="text-xs font-normal text-[#04669F] mt-2">
-                        Save more on return flight
-                      </p>
-                    </div>
+                  <div class="search-box location to has-swapper">
+                    <span class="swapper"></span>
+                    <span class="label">To</span>
+                    <div class="value">Cox's Bazar</div>
+                    <span class="sub-value"> CXB, Cox's Bazar Airport </span>
                   </div>
-                  <div className="rounded-tl-[10px] rounded-tr-none rounded-br-[10px] rounded-bl-none border px-4 py-2 w-full sm:w-[200px]">
-                    <p className="text-[#04669F]">Traveler, Class</p>
-                    <h3 className="text-[#04669F] font-bold text-lg">
-                      1 Traveler
-                    </h3>
-                    <p className="text-xs font-normal text-[#04669F]">
-                      Economy
-                    </p>
+                  <div class="search-box date depart">
+                    <span class="label">Journey Date</span>
+                    <div class="value">
+                      26 <span>May'24</span>
+                    </div>
+                    <span class="sub-value">Sunday</span>
                   </div>
-                  <button className="bg-[#04669F] ml-2 text-white w-full sm:max-w-[155px] font-bold text-lg rounded-tl-[10px] py-2 mb-2 sm:mb-0 rounded-tr-none rounded-br-[10px] rounded-bl-none ">
-                    Search
-                  </button>
+                  <div class="search-box date return">
+                    <span class="label">Return Date</span>
+                    <span class="sub-value inline-style">
+                      Save more on return flight
+                    </span>
+                  </div>
+                  <div class="search-box traveler">
+                    <span class="label">Traveler, Class</span>
+                    <div class="value">1 Traveler</div>
+                    <span class="sub-value">Economy</span>
+                  </div>
+                  <div className="search-box traveler mt-2 lg:mt-0 ml-2 bg-[#04669F] text-white flex items-center justify-center">
+                    <button className="">Search</button>
+                  </div>
                 </div>
               </div>
             </div>

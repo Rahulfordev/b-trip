@@ -2,34 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .swiper-wrapper {
-  height: 48vh !important;
-}
-
-@media screen and (max-width: 1280px) {
-  .swiper-wrapper {
-    height: 40vh !important;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .swiper-wrapper {
-    height: 30vh !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .swiper-wrapper {
-    height: 35vh !important;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .swiper-wrapper {
-    height: 40vh !important;
-  }
-} */
-
 .swiper-button-next,
 .swiper-button-prev {
   background-color: #fff;
