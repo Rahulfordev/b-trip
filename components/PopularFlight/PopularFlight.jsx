@@ -57,46 +57,56 @@ const PopularFlight = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <div className="bg-[url('/image/Destinations/destinations-1.png')] bg-cover bg-center bg-no-repeat w-full h-[330px] rounded-[10px]">
-                <div className="bg-custom-gradient w-full h-full rounded-[10px] text-white">
-                  <div className="pl-5">
-                    <p className="pt-[295px]">Cox's Bazar</p>
+              <div className="group relative w-full h-[330px] rounded-[10px] overflow-hidden">
+                <div className="bg-[url('/image/Destinations/destinations-1.png')] bg-cover bg-center bg-no-repeat w-full h-full transform transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-[10px]">
+                  <div className="bg-custom-gradient w-full h-full rounded-[10px] text-white">
+                    <div className="pl-5">
+                      <p className="absolute bottom-0 mb-5">Cox's Bazar</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-[url('/image/Destinations/destinations-2.png')] bg-cover bg-center bg-no-repeat w-full h-[330px] rounded-[10px]">
-                <div className="bg-custom-gradient w-full h-full rounded-[10px] text-white">
-                  <div className="pl-5">
-                    <p className="pt-[295px]">Jessore</p>
+              <div className="group relative w-full h-[330px] rounded-[10px] overflow-hidden">
+                <div className="bg-[url('/image/Destinations/destinations-2.png')] bg-cover bg-center bg-no-repeat w-full h-full transform transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-[10px]">
+                  <div className="bg-custom-gradient w-full h-full rounded-[10px] text-white">
+                    <div className="pl-5">
+                      <p className="absolute bottom-0 mb-5">Jessore</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-[url('/image/Destinations/destinations-3.png')] bg-cover bg-center bg-no-repeat w-full h-[330px] rounded-[10px]">
-                <div className="bg-custom-gradient w-full h-full rounded-[10px] text-white">
-                  <div className="pl-5">
-                    <p className="pt-[295px]">Chittagong</p>
+              <div className="group relative w-full h-[330px] rounded-[10px] overflow-hidden">
+                <div className="bg-[url('/image/Destinations/destinations-3.png')] bg-cover bg-center bg-no-repeat w-full h-full transform transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-[10px]">
+                  <div className="bg-custom-gradient w-full h-full rounded-[10px] text-white">
+                    <div className="pl-5">
+                      <p className="absolute bottom-0 mb-5">Chittagong</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-[url('/image/Destinations/destinations-4.png')] bg-cover bg-center bg-no-repeat w-full h-[330px] rounded-[10px]">
-                <div className="bg-custom-gradient w-full h-full rounded-[10px] text-white">
-                  <div className="pl-5">
-                    <p className="pt-[295px]">Sylhet</p>
+              <div className="group relative w-full h-[330px] rounded-[10px] overflow-hidden">
+                <div className="bg-[url('/image/Destinations/destinations-4.png')] bg-cover bg-center bg-no-repeat w-full h-full transform transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-[10px]">
+                  <div className="bg-custom-gradient w-full h-full rounded-[10px] text-white">
+                    <div className="pl-5">
+                      <p className="absolute bottom-0 mb-5">Sylhet</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-[url('/image/Destinations/destinations-5.png')] bg-cover bg-center bg-no-repeat w-full h-[330px] rounded-[10px]">
-                <div className="w-full h-full rounded-[10px] text-white">
-                  <div className="pl-5">
-                    <p className="pt-[295px]">Rangamati</p>
+              <div className="group relative w-full h-[330px] rounded-[10px] overflow-hidden">
+                <div className="bg-[url('/image/Destinations/destinations-5.png')] bg-cover bg-center bg-no-repeat w-full h-full transform transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-[10px]">
+                  <div className="bg-custom-gradient w-full h-full rounded-[10px] text-white">
+                    <div className="pl-5">
+                      <p className="absolute bottom-0 mb-5">Rangamati</p>
+                    </div>
                   </div>
                 </div>
               </div>

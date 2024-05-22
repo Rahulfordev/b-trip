@@ -28,14 +28,14 @@ const Footer = () => {
             <h3 className="text-[16px] font-bold text-white mb-2">Discovers</h3>
             <div className="text-white font-normal text-sm flex items-center gap-x-[19px]">
               <ul className="flex flex-col gap-y-[6px]">
-                <li>Home</li>
-                <li>Terms</li>
-                <li>Talent & Culture</li>
+                <li className="cursor-pointer">Home</li>
+                <li className="cursor-pointer">Terms</li>
+                <li className="cursor-pointer">Talent & Culture</li>
               </ul>
               <ul className="flex flex-col gap-y-[6px]">
-                <li>Refund Policy</li>
-                <li>EMI Policy</li>
-                <li>Privacy Policy</li>
+                <li className="cursor-pointer">Refund Policy</li>
+                <li className="cursor-pointer">EMI Policy</li>
+                <li className="cursor-pointer">Privacy Policy</li>
               </ul>
             </div>
           </div>
@@ -93,16 +93,16 @@ const Footer = () => {
           <div className="">
             <h3 className="text-[16px] font-bold text-white mb-2">Contact</h3>
             <div className="text-white">
-              <p className="pb-[6px]">info@btrip.com</p>
-              <p>+88 09678 002211</p>
+              <p className="pb-[6px] cursor-pointer">info@btrip.com</p>
+              <p className="cursor-pointer">+88 09678 002211</p>
               <div className="flex items-center gap-x-[10px] pt-5">
-                <div className="w-10 h-10 bg-[#ffffff28] rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#ffffff28] rounded-full flex items-center justify-center cursor-pointer">
                   <FaFacebookF className="text-base" />
                 </div>
-                <div className="w-10 h-10 bg-[#ffffff28] rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#ffffff28] rounded-full flex items-center justify-center cursor-pointer">
                   <FaYoutube className="text-base" />
                 </div>
-                <div className="w-10 h-10 bg-[#ffffff28] rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#ffffff28] rounded-full flex items-center justify-center cursor-pointer">
                   <FaInstagram className="text-base" />
                 </div>
               </div>
