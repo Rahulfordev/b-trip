@@ -43,7 +43,7 @@ const Footer = () => {
             <h3 className="text-[16px] font-bold text-white mb-2">
               Payment Methods
             </h3>
-            <ul className="grid grid-cols-4 gap-x-0 gap-y-2">
+            <ul className="grid grid-cols-4 gap-x-0 gap-y-2 sm:gap-x-2 sm:gap-y-2">
               <li>
                 <Image src={footer1} alt="payment-feature" />
               </li>
