@@ -25,17 +25,19 @@ const HeroSection = () => {
             <div className="w-full sm:max-w-[474px] h-[68px] bg-white rounded-[10px] px-[27px] flex items-center justify-between shadow-custom-blue absolute top-[-45px]">
               <button className="flex flex-col items-center gap-1 pt-5 pb-[10px] pl-[22px] pr-[18px] border-b-2 border-[#FC9A16]">
                 <Image src={Flight} alt="Flight" />
-                <span className="text-sm font-bold text-[#04669F]">Flight</span>
+                <span className="text-sm font-medium text-[#04669F]">
+                  Flight
+                </span>
               </button>
               <button className="flex flex-col items-center gap-1 pt-5 pb-[10px] pl-[22px] pr-[18px]">
                 <Image src={Hotel} alt="Flight" />
-                <span className="text-sm  font-bold text-[#04669F]">
+                <span className="text-sm  font-medium text-[#04669F]">
                   Haj & Umrah
                 </span>
               </button>
               <button className="flex flex-col items-center gap-1 pt-5 pb-[10px] pl-[22px] pr-[18px]">
                 <Image src={Tour} alt="Flight" />
-                <span className="text-sm font-bold text-[#04669F]">Tour</span>
+                <span className="text-sm font-medium text-[#04669F]">Tour</span>
               </button>
             </div>
             <div className="bg-white max-w-[1292px] h-full pb-4 md:pb-5 lg:pb-6 rounded-tl-none rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px] px-4">

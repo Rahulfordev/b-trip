@@ -27,8 +27,7 @@ const TourPackages = () => {
               <p className="max-w-[390px] text-sm">
                 Embark on a once-in-a-lifetime adventure with our private tour
                 of Pokhara in 5 hours. Your personal driver cum guide will pick
-                you up and take you on a journey to explore the best of this
-                enchanting city.
+                you up and take you on a journey...
               </p>
               <div className="flex items-center gap-2 text-lg font-normal">
                 <CiCalendar />
@@ -57,8 +56,7 @@ const TourPackages = () => {
               <p className="max-w-[390px] text-sm">
                 Embark on a once-in-a-lifetime adventure with our private tour
                 of Pokhara in 5 hours. Your personal driver cum guide will pick
-                you up and take you on a journey to explore the best of this
-                enchanting city.
+                you up and take you on a journey...
               </p>
               <div className="flex items-center gap-2 text-lg font-normal">
                 <CiCalendar />
@@ -87,8 +85,7 @@ const TourPackages = () => {
               <p className="max-w-[390px] text-sm">
                 Embark on a once-in-a-lifetime adventure with our private tour
                 of Pokhara in 5 hours. Your personal driver cum guide will pick
-                you up and take you on a journey to explore the best of this
-                enchanting city.
+                you up and take you on a journey...
               </p>
               <div className="flex items-center gap-2 text-lg font-normal">
                 <CiCalendar />

@@ -18,8 +18,7 @@
 
 .bar div.search-box .label {
   display: block;
-  font-size: 13.7px;
-  font-weight: 400;
+  font-size: 12px;
   line-height: 14px;
 }
 
@@ -31,8 +30,8 @@
 
 .bar div.search-box .value {
   color: #04669f;
-  font-size: 20.5px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 24px;
 }
 
@@ -42,14 +41,14 @@
 }
 
 .bar div.search-box .value span {
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 400;
   line-height: 20px;
 }
 
 .bar div.search-box .sub-value {
   display: block;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 14px;
   margin-top: 10px;
@@ -69,14 +68,14 @@
   background-image: url(/image/hero-section/swap.png);
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: 40px;
+  background-size: 35px;
   border-radius: 50%;
   height: 40px;
   left: -5px;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
+  width: 35px;
 }
 
 .flight-search div.date.depart {
@@ -119,14 +118,6 @@
     flex-basis: calc(50% - 5px);
     max-width: calc(50% - 5px);
     width: calc(50% - 5px);
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  .bar div.search-box .value {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 24px;
   }
 }
 
