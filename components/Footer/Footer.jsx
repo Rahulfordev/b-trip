@@ -112,7 +112,11 @@ const Footer = () => {
         <div className="pt-10">
           <hr className="border-white mt-3 mb-4" />
           <div className="flex items-center justify-between">
-            <Image src={LogoWhite} alt="logo" />
+            <Image
+              src={LogoWhite}
+              className="w-[85px] cursor-pointer"
+              alt="logo"
+            />
             <p className="text-sm font-normal text-white">
               © Copyright Btrip Ltd.
             </p>

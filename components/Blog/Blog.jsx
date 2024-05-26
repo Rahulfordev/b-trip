@@ -20,11 +20,11 @@ const Blog = () => {
             Contrary to popular belief
           </p>
         </div>
-        <div className="pt-10 grid gap-y-5 gap-x-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          <div className="max-w-[409px] mx-auto">
+        <div className="pt-10 grid gap-y-5 gap-x-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          <div className="max-w-[409px] mx-auto shadow-custom-shadow transition-shadow duration-300 p-3">
             <Image src={blog1} alt="blog1" />
             <div className="flex gap-x-4 text-sm font-medium text-[#2A2A2A] pt-[14px]">
-              Adventure Travel <li className="font-normal"> 03/30/2024</li>
+              Adventure Travel <li className="font-normal">03/30/2024</li>
             </div>
             <h4 className="text-[#1A2B50] text-[17px] font-medium pt-1 pb-[14px]">
               The day on Paris
@@ -33,14 +33,14 @@ const Blog = () => {
               From the iconic to the unexpected, the city of San Francisco never
               ceases to...
             </p>
-            <button className="text-sm font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
+            <button className="text-sm mb-1 font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
               Read More
             </button>
           </div>
-          <div className="max-w-[409px] mx-auto">
-            <Image src={blog2} alt="blog1" />
+          <div className="max-w-[409px] mx-auto shadow-custom-shadow transition-shadow duration-300 p-3">
+            <Image src={blog1} alt="blog1" />
             <div className="flex gap-x-4 text-sm font-medium text-[#2A2A2A] pt-[14px]">
-              Adventure Travel <li className="font-normal"> 03/30/2024</li>
+              Adventure Travel <li className="font-normal">03/30/2024</li>
             </div>
             <h4 className="text-[#1A2B50] text-[17px] font-medium pt-1 pb-[14px]">
               The day on Paris
@@ -49,14 +49,14 @@ const Blog = () => {
               From the iconic to the unexpected, the city of San Francisco never
               ceases to...
             </p>
-            <button className="text-sm font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
+            <button className="text-sm mb-1 font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
               Read More
             </button>
           </div>
-          <div className="max-w-[409px] mx-auto">
-            <Image src={blog3} alt="blog1" />
+          <div className="max-w-[409px] mx-auto shadow-custom-shadow transition-shadow duration-300 p-3">
+            <Image src={blog1} alt="blog1" />
             <div className="flex gap-x-4 text-sm font-medium text-[#2A2A2A] pt-[14px]">
-              Adventure Travel <li className="font-normal"> 03/30/2024</li>
+              Adventure Travel <li className="font-normal">03/30/2024</li>
             </div>
             <h4 className="text-[#1A2B50] text-[17px] font-medium pt-1 pb-[14px]">
               The day on Paris
@@ -65,14 +65,14 @@ const Blog = () => {
               From the iconic to the unexpected, the city of San Francisco never
               ceases to...
             </p>
-            <button className="text-sm font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
+            <button className="text-sm mb-1 font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
               Read More
             </button>
           </div>
-          <div className="max-w-[409px] mx-auto">
-            <Image src={blog4} alt="blog1" />
+          <div className="max-w-[409px] mx-auto shadow-custom-shadow transition-shadow duration-300 p-3">
+            <Image src={blog1} alt="blog1" />
             <div className="flex gap-x-4 text-sm font-medium text-[#2A2A2A] pt-[14px]">
-              Adventure Travel <li className="font-normal"> 03/30/2024</li>
+              Adventure Travel <li className="font-normal">03/30/2024</li>
             </div>
             <h4 className="text-[#1A2B50] text-[17px] font-medium pt-1 pb-[14px]">
               The day on Paris
@@ -81,14 +81,14 @@ const Blog = () => {
               From the iconic to the unexpected, the city of San Francisco never
               ceases to...
             </p>
-            <button className="text-sm font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
+            <button className="text-sm mb-1 font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
               Read More
             </button>
           </div>
-          <div className="max-w-[409px] mx-auto">
-            <Image src={blog5} alt="blog1" />
+          <div className="max-w-[409px] mx-auto shadow-custom-shadow transition-shadow duration-300 p-3">
+            <Image src={blog1} alt="blog1" />
             <div className="flex gap-x-4 text-sm font-medium text-[#2A2A2A] pt-[14px]">
-              Adventure Travel <li className="font-normal"> 03/30/2024</li>
+              Adventure Travel <li className="font-normal">03/30/2024</li>
             </div>
             <h4 className="text-[#1A2B50] text-[17px] font-medium pt-1 pb-[14px]">
               The day on Paris
@@ -97,14 +97,14 @@ const Blog = () => {
               From the iconic to the unexpected, the city of San Francisco never
               ceases to...
             </p>
-            <button className="text-sm font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
+            <button className="text-sm mb-1 font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
               Read More
             </button>
           </div>
-          <div className="max-w-[409px] mx-auto">
-            <Image src={blog6} alt="blog1" />
+          <div className="max-w-[409px] mx-auto shadow-custom-shadow transition-shadow duration-300 p-3">
+            <Image src={blog1} alt="blog1" />
             <div className="flex gap-x-4 text-sm font-medium text-[#2A2A2A] pt-[14px]">
-              Adventure Travel <li className="font-normal"> 03/30/2024</li>
+              Adventure Travel <li className="font-normal">03/30/2024</li>
             </div>
             <h4 className="text-[#1A2B50] text-[17px] font-medium pt-1 pb-[14px]">
               The day on Paris
@@ -113,7 +113,7 @@ const Blog = () => {
               From the iconic to the unexpected, the city of San Francisco never
               ceases to...
             </p>
-            <button className="text-sm font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
+            <button className="text-sm mb-1 font-medium text-[#2A2A2A] pr-2 pb-1 border-b-[3px] border-[#E50024]">
               Read More
             </button>
           </div>

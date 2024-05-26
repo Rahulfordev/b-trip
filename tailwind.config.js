@@ -15,6 +15,8 @@ module.exports = {
       boxShadow: {
         "custom-blue": "0px 4px 10px 0px rgba(0, 117, 255, 0.09)",
         "custom-black": "0px 3px 6px 0px rgba(104, 111, 119, 0.16)",
+        "custom-shadow":
+          "0 2px 4px rgba(28, 5, 77, 0.1), 0 12px 32px rgba(0, 0, 0, 0.05)",
       },
       backgroundImage: {
         "custom-gradient":
