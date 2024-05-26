@@ -1,24 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
+
 import { IoIosArrowDown } from "react-icons/io";
+import { FaBars } from "react-icons/fa";
 
 import Logo from "../../public/image/logo/logo.png";
-import Link from "next/link";
-import Sidebar from "../SideBar/SideBar";
 
-const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(null);
-
-  const toggleDropdown = (dropdown) => {
-    setDropdownOpen((prev) => (prev === dropdown ? null : dropdown));
-  };
-
+function Sidebar({ dropdownOpen, toggleDropdown }) {
   return (
-    <nav className="bg-white text-[#04669F] sticky top-0 z-50 shadow-custom-black">
-      <div className="max-w-[1292px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-[68px]">
-          <div className="flex-shrink-0 flex items-center">
+    <div className="drawer lg:drawer-open max-w-7xl mx-auto z-40">
+      <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content group flex flex-col items-center justify-center">
+        <label
+          htmlFor="my-drawer-2"
+          className="shadow-none ml-8 btn bg-transparent hover:bg-transparent border-none drawer-button lg:hidden"
+        >
+          <FaBars className="text-2xl bg-transparent text-[#04669F]" />
+        </label>
+      </div>
+      <div className="drawer-side">
+        <label
+          htmlFor="my-drawer-2"
+          aria-label="close sidebar"
+          className="drawer-overlay"
+        ></label>
+        <ul className="font-custom text-base menu pt-6 lg:pt-4 lg:mx-4 w-60 lg:rounded-md min-h-full lg:min-h-[90%] bg-[#fff] text-[#04669F] flex flex-col justify-between">
+          <div>
             <Link href={"/"}>
               <Image
                 src={Logo}
@@ -26,31 +34,29 @@ const Navbar = () => {
                 className="w-[85px] cursor-pointer"
               />
             </Link>
-          </div>
-          <div className="hidden md:flex md:items-center md:gap-20">
-            <div className="hidden md:flex md:space-x-4">
+            <div className="flex flex-col gap-y-2 mt-3">
               <Link
                 href="#"
-                className="px-3 py-2 rounded-md text-sm font-medium"
+                className="block px-3 py-2 text-base font-medium hover:bg-gray-100"
               >
                 Home
               </Link>
               <Link
                 href="#"
-                className="px-3 py-2 rounded-md text-sm font-medium"
+                className="block px-3 py-2 text-base font-medium hover:bg-gray-100"
               >
                 Flight
               </Link>
               <div className="relative">
                 <button
                   onClick={() => toggleDropdown("tour")}
-                  className="px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2"
+                  className="flex items-center justify-between gap-1 w-full text-left px-3 py-2 hover:bg-gray-100 text-base font-medium"
                 >
                   Tour
-                  <IoIosArrowDown />
+                  <IoIosArrowDown className="text-base" />
                 </button>
                 {dropdownOpen === "tour" && (
-                  <div className="absolute left-0 mt-4 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                  <div className="mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div className="py-1">
                       <Link
                         href="#"
@@ -77,13 +83,13 @@ const Navbar = () => {
               <div className="relative">
                 <button
                   onClick={() => toggleDropdown("haj")}
-                  className="px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2"
+                  className="flex items-center justify-between gap-1 w-full text-left px-3 py-2 hover:bg-gray-100 text-base font-medium"
                 >
                   Haj
-                  <IoIosArrowDown />
+                  <IoIosArrowDown className="text-base" />
                 </button>
                 {dropdownOpen === "haj" && (
-                  <div className="absolute left-0 mt-4 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                  <div className="mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div className="py-1">
                       <Link
                         href="#"
@@ -110,13 +116,13 @@ const Navbar = () => {
               <div className="relative">
                 <button
                   onClick={() => toggleDropdown("visa")}
-                  className="px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2"
+                  className="flex items-center justify-between gap-1 w-full text-left px-3 py-2 hover:bg-gray-100 text-base font-medium"
                 >
                   Visa
-                  <IoIosArrowDown />
+                  <IoIosArrowDown className="text-base" />
                 </button>
                 {dropdownOpen === "visa" && (
-                  <div className="absolute left-0 mt-4 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                  <div className="mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div className="py-1">
                       <Link
                         href="#"
@@ -142,24 +148,21 @@ const Navbar = () => {
               </div>
               <Link
                 href="#"
-                className="px-3 py-2 rounded-md text-sm font-medium"
+                className="block px-3 py-2 text-base font-medium hover:bg-gray-100"
               >
                 Blog
               </Link>
             </div>
-            <div>
-              <button className="text-sm font-semibold px-7 py-3 rounded-[38px] bg-[#04669F] text-white">
-                Login
-              </button>
-            </div>
           </div>
-          <div className="-mr-2 flex md:hidden">
-            <Sidebar dropdownOpen={dropdownOpen} toggleDropdown={toggleDropdown} />
+          <div className="mb-2">
+            <button className="text-sm font-medium w-full py-2 rounded bg-[#04669F] text-white">
+              Login
+            </button>
           </div>
-        </div>
+        </ul>
       </div>
-    </nav>
+    </div>
   );
-};
+}
 
-export default Navbar;
+export default Sidebar;
