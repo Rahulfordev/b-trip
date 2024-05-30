@@ -143,19 +143,111 @@
   }
 }
 
+/* airport suggestion */
+
 .airport-suggestion {
   background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 8px 12px rgba(51, 65, 80, 0.06),
-    0 14px 44px rgba(51, 65, 80, 0.11);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
   left: 0;
   overflow-y: auto;
   position: absolute;
   top: calc(100% + 10px);
-  width: 150%;
+  width: 120%;
   z-index: 10;
 }
 
 .airport-suggestion .input-wrapper {
   padding: 10px 15px;
+}
+
+.airport-suggestion .input-wrapper span.close {
+  display: none;
+}
+
+.close {
+  float: right;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: inherit;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}
+
+.airport-suggestion .input-wrapper input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../../../public/image/hero-section/search.png);
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  border: 0;
+  display: block;
+  outline: 0;
+  padding-left: 20px;
+  width: 100%;
+  background-color: white;
+  color: rgb(34, 33, 33);
+}
+
+.airport-suggestion .airport-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.airport-list::-webkit-scrollbar {
+  width: 12px;
+}
+.airport-list::-webkit-scrollbar-track {
+  background: #ededed;
+}
+.airport-list::-webkit-scrollbar-thumb {
+  background-color: #c0baba;
+}
+
+.airport-suggestion .airport-list .airport {
+  transition: all 0.3 ease-in-out;
+}
+
+.airport-suggestion .airport-list .airport:first-child {
+  background-color: #f5f5f5;
+}
+
+.airport-suggestion .airport-list .airport:hover {
+  background-color: #f5f5f5;
+}
+
+.airport-suggestion .airport-list .airport {
+  align-items: center;
+  display: flex;
+  padding: 8px 15px;
+  gap: 12px;
+}
+
+.airport-suggestion .airport-list .airport .hr {
+  border: 0.1px solid #989898;
+  height: 30px;
+}
+
+.airport-suggestion .airport-list .airport .airport-location .city-country {
+  color: #04669f;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.airport-suggestion .airport-list .airport .airport-location .airport-name {
+  color: #04669f;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.airport-suggestion .airport-list .airport .code {
+  color: #04669f;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
 }

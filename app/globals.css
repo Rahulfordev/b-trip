@@ -6,6 +6,27 @@ body {
   background-color: #fff;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #ededed;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #c0baba;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   background-color: #fff;
