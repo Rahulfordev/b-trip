@@ -19,7 +19,7 @@
 .bar div.search-box .label {
   display: block;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 0px;
 }
 
 .search-box span.label {

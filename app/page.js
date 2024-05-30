@@ -1,11 +1,11 @@
-import Blog from "@/components/Blog/Blog";
-import Featured from "@/components/Featured/Featured";
-import Footer from "@/components/Footer/Footer";
-import HeroSection from "@/components/Hero/Hero";
-import Navbar from "@/components/Navbar/Navbar";
-import PopularFlight from "@/components/PopularFlight/PopularFlight";
-import Testimonial from "@/components/Testimonial/Testimonial";
-import TourPackages from "@/components/TourPackages/TourPackages";
+import Blog from "@/components/Home/Blog/Blog";
+import Featured from "@/components/Home/Featured/Featured";
+import Footer from "@/components/Common/Footer/Footer";
+import HeroSection from "@/components/Home/Hero/Hero";
+import Navbar from "@/components/Common/Navbar/Navbar";
+import PopularFlight from "@/components/Home/PopularFlight/PopularFlight";
+import Testimonial from "@/components/Home/Testimonial/Testimonial";
+import TourPackages from "@/components/Home/TourPackages/TourPackages";
 
 export default function Home() {
   return (

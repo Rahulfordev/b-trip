@@ -7,9 +7,9 @@ import { Pagination } from "swiper/modules";
 
 import { FaStar } from "react-icons/fa";
 
-import testimonial1 from "../../public/image/testimonial/avatar-1.png";
-import testimonial2 from "../../public/image/testimonial/avatar-2.png";
-import testimonial3 from "../../public/image/testimonial/avatar-3.png";
+import testimonial1 from "../../../public/image/testimonial/avatar-1.png";
+import testimonial2 from "../../../public/image/testimonial/avatar-2.png";
+import testimonial3 from "../../../public/image/testimonial/avatar-3.png";
 import Image from "next/image";
 
 const Testimonial = () => {

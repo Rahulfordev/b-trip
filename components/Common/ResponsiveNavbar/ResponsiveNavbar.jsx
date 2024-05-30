@@ -5,9 +5,9 @@ import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaBars } from "react-icons/fa";
 
-import Logo from "../../public/image/logo/logo.png";
+import Logo from "../../../public/image/logo/logo.png";
 
-function Sidebar({ dropdownOpen, toggleDropdown }) {
+function ResponsiveNavbar({ dropdownOpen, toggleDropdown }) {
   return (
     <div className="drawer lg:drawer-open max-w-7xl mx-auto z-40">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -165,4 +165,4 @@ function Sidebar({ dropdownOpen, toggleDropdown }) {
   );
 }
 
-export default Sidebar;
+export default ResponsiveNavbar;

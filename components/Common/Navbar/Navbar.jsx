@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 
-import Logo from "../../public/image/logo/logo.png";
+import Logo from "../../../public/image/logo/logo.png";
 import Link from "next/link";
-import Sidebar from "../SideBar/SideBar";
+
+import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(null);
@@ -154,7 +155,10 @@ const Navbar = () => {
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
-            <Sidebar dropdownOpen={dropdownOpen} toggleDropdown={toggleDropdown} />
+            <ResponsiveNavbar
+              dropdownOpen={dropdownOpen}
+              toggleDropdown={toggleDropdown}
+            />
           </div>
         </div>
       </div>

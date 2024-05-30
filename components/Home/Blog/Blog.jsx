@@ -1,11 +1,11 @@
 import React from "react";
 
-import blog1 from "../../public/image/blog/news-1.png";
-import blog2 from "../../public/image/blog/news-2.png";
-import blog3 from "../../public/image/blog/news-3.png";
-import blog4 from "../../public/image/blog/news-4.png";
-import blog5 from "../../public/image/blog/news-6.png";
-import blog6 from "../../public/image/blog/news-5.png";
+import blog1 from "../../../public/image/blog/news-1.png";
+import blog2 from "../../../public/image/blog/news-2.png";
+import blog3 from "../../../public/image/blog/news-3.png";
+import blog4 from "../../../public/image/blog/news-4.png";
+import blog5 from "../../../public/image/blog/news-6.png";
+import blog6 from "../../../public/image/blog/news-5.png";
 import Image from "next/image";
 
 const Blog = () => {

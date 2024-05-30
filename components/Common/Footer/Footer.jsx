@@ -5,19 +5,19 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
-import LogoWhite from "../../public/image/logo/logo-white.png";
+import LogoWhite from "../../../public/image/logo/logo-white.png";
 
-import footer1 from "../../public/image/footer/footer-1.png";
-import footer2 from "../../public/image/footer/footer-2.png";
-import footer3 from "../../public/image/footer/footer-3.png";
-import footer4 from "../../public/image/footer/footer-4.png";
-import footer5 from "../../public/image/footer/footer-5.png";
-import footer6 from "../../public/image/footer/footer-6.png";
-import footer7 from "../../public/image/footer/footer-7.png";
-import footer8 from "../../public/image/footer/footer-8.png";
-import footer9 from "../../public/image/footer/footer-9.png";
-import footer10 from "../../public/image/footer/footer-10.png";
-import footer11 from "../../public/image/footer/footer-11.png";
+import footer1 from "../../../public/image/footer/footer-1.png";
+import footer2 from "../../../public/image/footer/footer-2.png";
+import footer3 from "../../../public/image/footer/footer-3.png";
+import footer4 from "../../../public/image/footer/footer-4.png";
+import footer5 from "../../../public/image/footer/footer-5.png";
+import footer6 from "../../../public/image/footer/footer-6.png";
+import footer7 from "../../../public/image/footer/footer-7.png";
+import footer8 from "../../../public/image/footer/footer-8.png";
+import footer9 from "../../../public/image/footer/footer-9.png";
+import footer10 from "../../../public/image/footer/footer-10.png";
+import footer11 from "../../../public/image/footer/footer-11.png";
 
 const Footer = () => {
   return (

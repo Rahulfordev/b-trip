@@ -4,9 +4,9 @@ import React from "react";
 import { CiCalendar } from "react-icons/ci";
 import { CiClock2 } from "react-icons/ci";
 
-import TourOne from "../../public/image/tour/tour-1.png";
-import TourTwo from "../../public/image/tour/tour-2.png";
-import TourThree from "../../public/image/tour/tour-3.png";
+import TourOne from "../../../public/image/tour/tour-1.png";
+import TourTwo from "../../../public/image/tour/tour-2.png";
+import TourThree from "../../../public/image/tour/tour-3.png";
 
 const TourPackages = () => {
   return (
