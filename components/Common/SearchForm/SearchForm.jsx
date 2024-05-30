@@ -101,6 +101,18 @@ const SearchForm = () => {
             <span class="sub-value">
               DAC, Hazrat Shahjalal International Airport
             </span>
+            <div className="airport-suggestion">
+              <div class="input-wrapper">
+                <span class="close"></span>
+                <input
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Type to search"
+                />
+                <span class="clear"></span>
+              </div>
+              <div className="airport-list"></div>
+            </div>
           </div>
           <div class="search-box location to has-swapper">
             <span class="swapper"></span>

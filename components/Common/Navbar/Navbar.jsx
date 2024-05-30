@@ -31,13 +31,13 @@ const Navbar = () => {
           <div className="hidden md:flex md:items-center md:gap-20">
             <div className="hidden md:flex md:space-x-4">
               <Link
-                href="#"
+                href="/"
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
                 Home
               </Link>
               <Link
-                href="#"
+                href="/Flight-Details"
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
                 Flight
