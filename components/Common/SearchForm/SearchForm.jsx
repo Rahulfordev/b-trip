@@ -51,26 +51,61 @@ const abbreviateCityName = (cityName) => {
 };
 
 const SearchForm = () => {
-  const [showAirportSuggestion, setShowAirportSuggestion] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredAirports, setFilteredAirports] = useState(
+  const [showAirportSuggestion, setShowAirportSuggestion] = useState(null);
+  const toggleShowAirportSuggestion = (dropdown) => {
+    setShowAirportSuggestion((prev) => (prev === dropdown ? null : dropdown));
+  };
+  const [searchTermFrom, setSearchTermFrom] = useState("");
+  const [searchTermTo, setSearchTermTo] = useState("");
+  const [filteredAirportsFrom, setFilteredAirportsFrom] = useState(
     airportData.slice(0, 8)
   );
-  const [selectedAirport, setSelectedAirport] = useState(null);
+  const [filteredAirportsTo, setFilteredAirportsTo] = useState(
+    airportData.slice(0, 8)
+  );
+  const [selectedAirportFrom, setSelectedAirportFrom] = useState(
+    airportData[1] // Initially set to Cox’s Bazar, Bangladesh
+  );
+  const [selectedAirportTo, setSelectedAirportTo] = useState(
+    airportData[0] // Initially set to Dhaka, Bangladesh
+  );
 
-  const handleSearchChange = (e) => {
+  const handleSearchChangeFrom = (e) => {
     const value = normalizeString(e.target.value);
-    setSearchTerm(value);
+    setSearchTermFrom(value);
 
     const filtered = airportData.filter((airport) =>
       normalizeString(airport.cityName).includes(value)
     );
-    setFilteredAirports(filtered.slice(0, 8));
+    setFilteredAirportsFrom(filtered.slice(0, 8));
   };
 
-  const handleAirportClick = (airport) => {
-    setSelectedAirport(airport);
-    setSearchTerm("");
+  const handleSearchChangeTo = (e) => {
+    const value = normalizeString(e.target.value);
+    setSearchTermTo(value);
+
+    const filtered = airportData.filter((airport) =>
+      normalizeString(airport.cityName).includes(value)
+    );
+    setFilteredAirportsTo(filtered.slice(0, 8));
+  };
+
+  const handleAirportClickFrom = (airport) => {
+    setSelectedAirportFrom(airport);
+    setSearchTermFrom("");
+    setShowAirportSuggestion(null);
+  };
+
+  const handleAirportClickTo = (airport) => {
+    setSelectedAirportTo(airport);
+    setSearchTermTo("");
+    setShowAirportSuggestion(null);
+  };
+
+  const handleSwap = () => {
+    const temp = selectedAirportFrom;
+    setSelectedAirportFrom(selectedAirportTo);
+    setSelectedAirportTo(temp);
   };
 
   return (
@@ -167,22 +202,20 @@ const SearchForm = () => {
         </div>
         <div className="flight-search bar pt-2">
           <div className="search-box location from">
-            <div
-              onClick={() => setShowAirportSuggestion(!showAirportSuggestion)}
-            >
+            <div onClick={() => toggleShowAirportSuggestion("from")}>
               <span className="label">From</span>
               <div className="value">
-                {selectedAirport
-                  ? abbreviateCityName(selectedAirport.cityName)
+                {selectedAirportFrom
+                  ? abbreviateCityName(selectedAirportFrom.cityName)
                   : "Dhaka"}
               </div>
               <span className="sub-value">
-                {selectedAirport
-                  ? `${selectedAirport.code}, ${selectedAirport.airportName}`
+                {selectedAirportFrom
+                  ? `${selectedAirportFrom.code}, ${selectedAirportFrom.airportName}`
                   : "DAC, Hazrat Shahjalal International Airport"}
               </span>
             </div>
-            {showAirportSuggestion && (
+            {showAirportSuggestion === "from" && (
               <div className="airport-suggestion">
                 <div className="input-wrapper">
                   <span className="close"></span>
@@ -190,20 +223,20 @@ const SearchForm = () => {
                     type="text"
                     autoComplete="off"
                     placeholder="Type to search"
-                    value={searchTerm}
-                    onChange={handleSearchChange}
+                    value={searchTermFrom}
+                    onChange={handleSearchChangeFrom}
                   />
                   <span
                     className="clear"
-                    onClick={() => setSearchTerm("")}
+                    onClick={() => setSearchTermFrom("")}
                   ></span>
                 </div>
                 <div className="airport-list">
-                  {filteredAirports.map((airport) => (
+                  {filteredAirportsFrom.map((airport) => (
                     <div
                       className="airport"
                       key={airport.id}
-                      onClick={() => handleAirportClick(airport)}
+                      onClick={() => handleAirportClickFrom(airport)}
                     >
                       <div className="code">{airport.code}</div>
                       <hr className="hr" />
@@ -220,10 +253,56 @@ const SearchForm = () => {
             )}
           </div>
           <div className="search-box location to has-swapper">
-            <span className="swapper"></span>
-            <span className="label">To</span>
-            <div className="value">Cox's Bazar</div>
-            <span className="sub-value"> CXB, Cox's Bazar Airport </span>
+            <span className="swapper" onClick={handleSwap}></span>
+            <div onClick={() => toggleShowAirportSuggestion("to")}>
+              <span className="label">To</span>
+              <div className="value">
+                {selectedAirportTo
+                  ? abbreviateCityName(selectedAirportTo.cityName)
+                  : "Cox's Bazar"}
+              </div>
+              <span className="sub-value">
+                {selectedAirportTo
+                  ? `${selectedAirportTo.code}, ${selectedAirportTo.airportName}`
+                  : "CXB, Cox's Bazar Airport"}
+              </span>
+            </div>
+            {showAirportSuggestion === "to" && (
+              <div className="airport-suggestion">
+                <div className="input-wrapper">
+                  <span className="close"></span>
+                  <input
+                    type="text"
+                    autoComplete="off"
+                    placeholder="Type to search"
+                    value={searchTermTo}
+                    onChange={handleSearchChangeTo}
+                  />
+                  <span
+                    className="clear"
+                    onClick={() => setSearchTermTo("")}
+                  ></span>
+                </div>
+                <div className="airport-list">
+                  {filteredAirportsTo.map((airport) => (
+                    <div
+                      className="airport"
+                      key={airport.id}
+                      onClick={() => handleAirportClickTo(airport)}
+                    >
+                      <div className="code">{airport.code}</div>
+                      <hr className="hr" />
+                      <div className="airport-location">
+                        <div className="city-country">{airport.cityName}</div>
+                        <div className="airport-name">
+                          {airport.airportName}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
           <div className="search-box date depart">
             <span className="label">Journey Date</span>
