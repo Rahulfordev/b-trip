@@ -25,6 +25,12 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  color: inherit;
+  background-color: inherit;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
 }
 
 .swiper-button-next,
