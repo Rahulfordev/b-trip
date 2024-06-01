@@ -55,20 +55,23 @@ const SearchForm = () => {
   const toggleShowAirportSuggestion = (dropdown) => {
     setShowAirportSuggestion((prev) => (prev === dropdown ? null : dropdown));
   };
+
   const [searchTermFrom, setSearchTermFrom] = useState("");
   const [searchTermTo, setSearchTermTo] = useState("");
+
+  // slice data
   const [filteredAirportsFrom, setFilteredAirportsFrom] = useState(
     airportData.slice(0, 8)
   );
   const [filteredAirportsTo, setFilteredAirportsTo] = useState(
     airportData.slice(0, 8)
   );
+
+  // from value
   const [selectedAirportFrom, setSelectedAirportFrom] = useState(
-    airportData[1] // Initially set to Cox’s Bazar, Bangladesh
+    airportData[0]
   );
-  const [selectedAirportTo, setSelectedAirportTo] = useState(
-    airportData[0] // Initially set to Dhaka, Bangladesh
-  );
+  const [selectedAirportTo, setSelectedAirportTo] = useState(airportData[1]);
 
   const handleSearchChangeFrom = (e) => {
     const value = normalizeString(e.target.value);
@@ -205,14 +208,10 @@ const SearchForm = () => {
             <div onClick={() => toggleShowAirportSuggestion("from")}>
               <span className="label">From</span>
               <div className="value">
-                {selectedAirportFrom
-                  ? abbreviateCityName(selectedAirportFrom.cityName)
-                  : "Dhaka"}
+                {abbreviateCityName(selectedAirportFrom.cityName)}
               </div>
               <span className="sub-value">
-                {selectedAirportFrom
-                  ? `${selectedAirportFrom.code}, ${selectedAirportFrom.airportName}`
-                  : "DAC, Hazrat Shahjalal International Airport"}
+                {selectedAirportFrom.code}, {selectedAirportFrom.airportName}
               </span>
             </div>
             {showAirportSuggestion === "from" && (
@@ -257,14 +256,10 @@ const SearchForm = () => {
             <div onClick={() => toggleShowAirportSuggestion("to")}>
               <span className="label">To</span>
               <div className="value">
-                {selectedAirportTo
-                  ? abbreviateCityName(selectedAirportTo.cityName)
-                  : "Cox's Bazar"}
+                {abbreviateCityName(selectedAirportTo.cityName)}
               </div>
               <span className="sub-value">
-                {selectedAirportTo
-                  ? `${selectedAirportTo.code}, ${selectedAirportTo.airportName}`
-                  : "CXB, Cox's Bazar Airport"}
+                {selectedAirportTo.code}, {selectedAirportTo.airportName}
               </span>
             </div>
             {showAirportSuggestion === "to" && (
