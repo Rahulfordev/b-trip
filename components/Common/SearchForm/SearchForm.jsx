@@ -119,8 +119,7 @@ const SearchForm = () => {
   const [openClassSection, setOpenClassSection] = useState(false);
   const [openPassengerSelection, setOpenPassengerSelection] = useState(false);
 
-  const handlePassengerSelection = (e) => {
-    e.stopPropagation();
+  const handlePassengerSelection = () => {
     setOpenPassengerSelection(!openPassengerSelection);
   };
   return (
@@ -217,22 +216,26 @@ const SearchForm = () => {
             </button>
           </div>
           <div className="text-[#04669F] font-semibold sm:font-bold text-[12px] sm:text-[15px] flex items-center gap-[10px] pt-2 pb-1 sm:pt-0 sm:pb-2">
-            <p
-              onClick={() => setOpenClassSection(!openClassSection)}
-              className="flex items-center gap-1 bg-[#C2E9FF] rounded-tl-[10px] rounded-br-[10px] px-[12px] py-[5px] sm:px-[14px] sm:py-[6px] relative"
-            >
-              <span>1 Traveler</span>
-              <IoIosArrowDown />
+            <div className="relative">
+              <p
+                onClick={() => setOpenClassSection(!openClassSection)}
+                className="flex items-center gap-1 bg-[#C2E9FF] rounded-tl-[10px] rounded-br-[10px] px-[12px] py-[5px] sm:px-[14px] sm:py-[6px]"
+              >
+                <span>1 Traveler</span>
+                <IoIosArrowDown />
+              </p>
               {openClassSection && <ClassSelection />}
-            </p>
-            <p
-              onClick={handlePassengerSelection}
-              className="flex items-center gap-1 bg-[#C2E9FF] rounded-tl-[10px] rounded-br-[10px] px-[12px] py-[5px] sm:px-[14px] sm:py-[6px] relative"
-            >
-              <span>Economy</span>
-              <IoIosArrowDown />
-              {openPassengerSelection && <PassengerSelection />}
-            </p>
+            </div>
+            <div className="relative">
+              <p
+                onClick={handlePassengerSelection}
+                className="flex items-center gap-1 bg-[#C2E9FF] rounded-tl-[10px] rounded-br-[10px] px-[12px] py-[5px] sm:px-[14px] sm:py-[6px]"
+              >
+                <span>Economy</span>
+                <IoIosArrowDown />
+              </p>
+              {openPassengerSelection && <PassengerSelection  />}
+            </div>
           </div>
         </div>
         <div className="flight-search bar pt-2">
