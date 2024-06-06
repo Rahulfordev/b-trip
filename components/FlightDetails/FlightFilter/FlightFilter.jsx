@@ -28,7 +28,7 @@ const FlightFilter = () => {
   };
 
   return (
-    <div className="w-[273px] max-w-[273px]">
+    <div className="w-[273px] max-w-[273px] hidden lg:block">
       <div className="bg-white rounded-[10px] flex items-center justify-between gap-8 mb-4 px-[10px]">
         <div className="flex items-center gap-2 py-3">
           <Image src={clock} alt="clock" />

@@ -1,7 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { useState } from "react";
+
+import { IoIosArrowDown } from "react-icons/io";
+
 import "./SearchForm.css";
+import ClassSelection from "@/components/ClassSelection/ClassSelection";
+import PassengerSelection from "@/components/PassengerSelection/PassengerSelection";
 
 const airportData = [
   {
@@ -111,97 +116,124 @@ const SearchForm = () => {
     setSelectedAirportTo(temp);
   };
 
+  const [openClassSection, setOpenClassSection] = useState(false);
+  const [openPassengerSelection, setOpenPassengerSelection] = useState(false);
+
+  const handlePassengerSelection = (e) => {
+    e.stopPropagation();
+    setOpenPassengerSelection(!openPassengerSelection);
+  };
   return (
     <div className="bg-white max-w-[1292px] mx-auto h-full pb-4 md:pb-5 lg:pb-6 rounded-tl-none rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px] px-4">
       <div className="pt-10">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-          <button className="flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <button className="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <g clipPath="url(#clip0_366_3107)">
+                  <path
+                    d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8Z"
+                    stroke="#04669F"
+                    strokeWidth="2"
+                  />
+                  <path
+                    d="M12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8Z"
+                    fill="#04669F"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_366_3107">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span className="text-sm font-semibold text-[#04669F]">
+                One Way
+              </span>
+            </button>
+            <button className="flex items-center gap-2 opacity-30">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <g clipPath="url(#clip0_366_3107)">
+                  <path
+                    d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8Z"
+                    stroke="#1C3C6B"
+                    strokeWidth="2"
+                  />
+                  <path
+                    d="M12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8Z"
+                    fill="#1C3C6B"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_366_3107">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span className="text-sm font-semibold text-[#1C3C6B]">
+                Round Trip
+              </span>
+            </button>
+            <button className="flex items-center gap-2 opacity-30">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <g clipPath="url(#clip0_366_3107)">
+                  <path
+                    d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8Z"
+                    stroke="#1C3C6B"
+                    strokeWidth="2"
+                  />
+                  <path
+                    d="M12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8Z"
+                    fill="#1C3C6B"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_366_3107">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span className="text-sm font-semibold text-[#1C3C6B]">
+                Multi City
+              </span>
+            </button>
+          </div>
+          <div className="text-[#04669F] font-semibold sm:font-bold text-[12px] sm:text-[15px] flex items-center gap-[10px] pt-2 pb-1 sm:pt-0 sm:pb-2">
+            <p
+              onClick={() => setOpenClassSection(!openClassSection)}
+              className="flex items-center gap-1 bg-[#C2E9FF] rounded-tl-[10px] rounded-br-[10px] px-[12px] py-[5px] sm:px-[14px] sm:py-[6px] relative"
             >
-              <g clipPath="url(#clip0_366_3107)">
-                <path
-                  d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8Z"
-                  stroke="#04669F"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8Z"
-                  fill="#04669F"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_366_3107">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <span className="text-sm font-semibold text-[#04669F]">
-              One Way
-            </span>
-          </button>
-          <button className="flex items-center gap-2 opacity-30">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
+              <span>1 Traveler</span>
+              <IoIosArrowDown />
+              {openClassSection && <ClassSelection />}
+            </p>
+            <p
+              onClick={handlePassengerSelection}
+              className="flex items-center gap-1 bg-[#C2E9FF] rounded-tl-[10px] rounded-br-[10px] px-[12px] py-[5px] sm:px-[14px] sm:py-[6px] relative"
             >
-              <g clipPath="url(#clip0_366_3107)">
-                <path
-                  d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8Z"
-                  stroke="#1C3C6B"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8Z"
-                  fill="#1C3C6B"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_366_3107">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <span className="text-sm font-semibold text-[#1C3C6B]">
-              Round Trip
-            </span>
-          </button>
-          <button className="flex items-center gap-2 opacity-30">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <g clipPath="url(#clip0_366_3107)">
-                <path
-                  d="M15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8Z"
-                  stroke="#1C3C6B"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8Z"
-                  fill="#1C3C6B"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_366_3107">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <span className="text-sm font-semibold text-[#1C3C6B]">
-              Multi City
-            </span>
-          </button>
+              <span>Economy</span>
+              <IoIosArrowDown />
+              {openPassengerSelection && <PassengerSelection />}
+            </p>
+          </div>
         </div>
         <div className="flight-search bar pt-2">
           <div className="search-box location from">

@@ -20,7 +20,8 @@ input,
 button,
 select,
 optgroup,
-textarea {
+textarea,
+input[type="radio"] {
   margin: 0;
   font-family: inherit;
   font-size: inherit;

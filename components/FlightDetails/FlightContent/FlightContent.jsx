@@ -29,16 +29,15 @@ const FlightContent = () => {
     }));
   };
   return (
-    <div className="w-[1003px] max-w-[1003px]">
+    <div className="w-full md:w-[1003px] mx-auto">
       <div className="mb-8">
         <h4 className="text-xl font-semibold text-[#04669F]">
           10 Available Flights
         </h4>
       </div>
-      <div className="grid grid-cols-[52px,1fr,52px] rounded-lg mb-4">
+      <div className="hidden lg:grid grid-cols-[52px,1fr,52px] rounded-lg mb-4">
         <div className="bg-[#F5F7FA] flex items-center justify-center">
           <RiArrowLeftSLine className="text-[#9BA6B2] text-2xl" />
-          {/* <RiArrowRightSLine className="text-[#9BA6B2]" /> */}
         </div>
         <div className="flex items-center">
           <div className="flex items-center justify-center bg-white px-5 py-2 grow">
@@ -136,7 +135,7 @@ const FlightContent = () => {
           <RiArrowRightSLine className="text-[#9BA6B2] text-2xl" />
         </div>
       </div>
-      <div className="bg-[#F5F7FA] rounded-lg">
+      <div className="hidden lg:block bg-[#F5F7FA] rounded-lg">
         <div className="grid grid-cols-3">
           <div className="flex justify-between items-center py-5 px-4">
             <h4 className="text-base text-[#000000] font-semibold">Earliest</h4>
@@ -156,10 +155,10 @@ const FlightContent = () => {
         <div>
           <div className="my-4 w-full">
             <div className="bg-white rounded-tr-[10px] rounded-tl-[10px] p-3">
-              <div className="flex items-center justify-between">
-                <div className="basis-[75%] ">
-                  <div className="flex items-center justify-between text-[#04669F]">
-                    <div className="flex items-center pl-[8px]">
+              <div className="flex flex-col md:flex-row items-center justify-between">
+                <div className="w-full md:basis-[75%] pb-4 md:pb-0">
+                  <div className="flex w-full flex-col md:flex-row items-center justify-between text-[#04669F]">
+                    <div className="flex items-center justify-start w-full pb-3 md:pb-0 md:pl-[8px]">
                       <div>
                         <Image src={vqf} alt="vqf" />
                       </div>
@@ -167,48 +166,52 @@ const FlightContent = () => {
                         <h4 className="font-semibold text-xl">NOVOAIR</h4>
                       </div>
                     </div>
-                    <div>
-                      <div className="flex items-center gap-8 justify-between">
-                        <div>
-                          <h4 className="font-semibold text-xl">10:30</h4>
-                          <p className="text-sm font-normal">DAC</p>
-                        </div>
-                        <div className="text-center">
-                          <p className="text-sm font-normal">Non-Stop</p>
-                          <Image src={arrow} alt="arrow" />
-                          <p className="text-sm font-normal">Direct Flight</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-xl">11:30</h4>
-                          <p className="text-sm font-normal">CXB</p>
+                    <div className="md:flex w-full items-center justify-between">
+                      <div>
+                        <div className="flex w-full items-center gap-8 justify-between">
+                          <div>
+                            <h4 className="font-semibold text-xl">10:30</h4>
+                            <p className="text-sm font-normal">DAC</p>
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm font-normal">Non-Stop</p>
+                            <Image src={arrow} alt="arrow" />
+                            <p className="text-sm font-normal">Direct Flight</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-xl">11:30</h4>
+                            <p className="text-sm font-normal">CXB</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="text-base font-semibold">
-                      <p>01h</p>
-                      <p>00m</p>
+                      <div className="text-base font-semibold hidden md:block">
+                        <p>01h</p>
+                        <p>00m</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="basis-[15%] bg-[#F5F5F5] p-[10px]">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-2 justify-end">
-                      <Image src={coupon} alt="coupon" />
-                      <p className="text-sm font-medium text-[#04669F]">
-                        AMEX00A5
-                      </p>
+                <div className="md:basis-[15%] w-full bg-[#F5F5F5] p-[10px]">
+                  <div className="flex md:flex-col justify-between gap-4">
+                    <div>
+                      <div className="flex items-center gap-2 justify-start md:justify-end">
+                        <Image src={coupon} alt="coupon" />
+                        <p className="text-sm font-medium text-[#04669F]">
+                          AMEX00A5
+                        </p>
+                      </div>
+                      <div className="flex md:block items-center gap-1">
+                        <p className="flex items-center md:justify-end gap-1 text-xl text-[#04669F]">
+                          <span>৳</span>
+                          <span className="font-semibold">4,597</span>
+                        </p>
+                        <del className="flex md:justify-end text-sm font-normal text-[#04669F]">
+                          ৳ 4,999
+                        </del>
+                      </div>
                     </div>
                     <div>
-                      <p className="flex items-center justify-end gap-1 text-xl text-[#04669F]">
-                        <span>৳</span>
-                        <span className="font-semibold">4,597</span>
-                      </p>
-                      <del className="flex justify-end text-sm font-normal text-[#04669F]">
-                        ৳ 4,999
-                      </del>
-                    </div>
-                    <div>
-                      <button className="flex items-center justify-end gap-1 bg-[#FC9A16] rounded-[10px] text-white text-sm font-normal py-[11px] px-[35px]">
+                      <button className="flex items-center justify-center md:justify-end gap-1 bg-[#FC9A16] rounded-[10px] text-white text-sm font-normal py-[11px] px-[35px]">
                         Select <MdKeyboardArrowRight className="text-xl" />
                       </button>
                     </div>
@@ -245,12 +248,14 @@ const FlightContent = () => {
                 </div>
               </div>
               <div
-                className={`overflow-hidden text-[#04669F] transition-all duration-200 ${
-                  showFlightDetails.flight ? "max-h-96" : "max-h-0"
+                className={`overflow-hidden text-[#04669F] hidden transition-all duration-200 ${
+                  showFlightDetails.flight
+                    ? "max-h-[480px] md:max-h-96"
+                    : "max-h-0"
                 }`}
               >
-                <div className="p-3 bg-[#F5F5F5] flex gap-3">
-                  <div className="bg-white rounded-[10px] p-4 basis-[50%]">
+                <div className="p-3 bg-[#F5F5F5] flex justify-between flex-col md:flex-row">
+                  <div className="bg-white rounded-[10px] p-4 lg:basis-[50%]">
                     <h4>Flight Details</h4>
                     <div>
                       <div>
@@ -296,7 +301,7 @@ const FlightContent = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-[#EDEDED] rounded-[10px] basis-[50%]">
+                  <div className="bg-[#EDEDED] rounded-[10px] lg:basis-[50%]">
                     <div className="p-4">
                       <div className="flex items-center justify-between">
                         <button className="text-sm font-medium text-white bg-[#FC9A16] py-2 px-[47px] rounded-tl-[10px] rounded-bl-[10px]">
