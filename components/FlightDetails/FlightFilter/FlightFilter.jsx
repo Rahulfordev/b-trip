@@ -9,6 +9,7 @@ import weather1 from "../../../public/image/flight-details/weather-1.png";
 import weather2 from "../../../public/image/flight-details/weather-2.png";
 import weather3 from "../../../public/image/flight-details/weather-3.png";
 import weather4 from "../../../public/image/flight-details/weather-4.png";
+import PriceRange from "@/components/PriceRange/PriceRange";
 
 const FlightFilter = () => {
   const [filterState, setFilterState] = useState({
@@ -59,9 +60,7 @@ const FlightFilter = () => {
               filterState.price ? "max-h-14" : "max-h-0"
             }`}
           >
-            <p className="text-sm font-medium text-[#04669F]">
-              BDT 5,390 - BDT 5,950
-            </p>
+            <PriceRange />
           </div>
         </div>
         <div className="pl-5 pr-[14px] pt-[14px] pb-3 border-t">
