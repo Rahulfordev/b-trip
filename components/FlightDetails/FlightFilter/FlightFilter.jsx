@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 import { IoIosArrowDown, IoMdArrowDropdown } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
 
 import clock from "../../../public/image/flight-details/clock.png";
 import weather1 from "../../../public/image/flight-details/weather-1.png";
@@ -11,7 +12,7 @@ import weather3 from "../../../public/image/flight-details/weather-3.png";
 import weather4 from "../../../public/image/flight-details/weather-4.png";
 import PriceRange from "@/components/PriceRange/PriceRange";
 
-const FlightFilter = () => {
+const FlightFilter = ({ setShowFilter }) => {
   const [filterState, setFilterState] = useState({
     price: true,
     schedules: true,
@@ -27,10 +28,9 @@ const FlightFilter = () => {
       [filterName]: !prevState[filterName],
     }));
   };
-
   return (
-    <div className="w-[273px] max-w-[273px] hidden lg:block">
-      <div className="bg-white rounded-[10px] flex items-center justify-between gap-8 mb-4 px-[10px]">
+    <div className="">
+      <div className="bg-white rounded-[10px] hidden lg:flex items-center justify-between gap-8 mb-4 px-[10px]">
         <div className="flex items-center gap-2 py-3">
           <Image src={clock} alt="clock" />
           <h3 className="text-base font-semibold text-[#04669F]">
@@ -40,8 +40,14 @@ const FlightFilter = () => {
         <h2 className="font-semibold text-xl text-[#FC9A16]">20.10</h2>
       </div>
       <div className="bg-white rounded-[10px] pt-5">
-        <div className="pb-4 pl-5">
+        <div className="pb-4 px-5 flex items-center justify-between">
           <p className="text-base font-medium text-[#04669F]">FILTER BY</p>
+          <button
+            onClick={() => setShowFilter(false)}
+            className="text-xl lg:hidden"
+          >
+            <IoClose />
+          </button>
         </div>
         <div className="pl-7 pr-[14px] pt-5 pb-3 border-t">
           <div
@@ -82,10 +88,10 @@ const FlightFilter = () => {
           >
             <div>
               <div className="rounded-[7px] border p-[2px] pt-1 flex items-center gap-[3px]">
-                <button className="text-[#1882FF] text-xs font-medium bg-[#D4E8FF] px-9 py-2 rounded-tl-[7px] rounded-bl-[7px]">
+                <button className="text-[#1882FF] text-xs font-medium bg-[#D4E8FF] w-full py-2 rounded-tl-[7px] rounded-bl-[7px]">
                   Departure
                 </button>
-                <button className="text-[#1A2B3D] text-xs font-medium bg-[#EBF0F5] px-9 py-2 rounded-tr-[7px] rounded-br-[7px]">
+                <button className="text-[#1A2B3D] text-xs font-medium bg-[#EBF0F5] w-full py-2 rounded-tr-[7px] rounded-br-[7px]">
                   Departure
                 </button>
               </div>
@@ -93,26 +99,26 @@ const FlightFilter = () => {
                 <h3 className="text-sm font-medium text-[#1A2B3D] mb-3">
                   Departure Dhaka: Anytime
                 </h3>
-                <div className="rounded-[7px] border p-[2px] flex items-center justify-between">
-                  <div className="bg-[#EBF0F5] flex flex-col gap-[2px] items-center py-[7px] px-[5px] rounded-tl-[7px] rounded-bl-[7px] cursor-pointer">
+                <div className="rounded-[7px] border p-[2px] flex items-center gap-1 justify-between">
+                  <div className="bg-[#EBF0F5] flex flex-col gap-[2px] items-center py-[7px] w-full rounded-tl-[7px] rounded-bl-[7px] cursor-pointer">
                     <Image src={weather1} alt="weather" />
                     <p className="text-[10px] font-normal text-[#77818C]">
                       00-06 AM
                     </p>
                   </div>
-                  <div className="bg-[#EBF0F5] flex flex-col gap-[2px] items-center py-[7px] px-[5px] cursor-pointer">
+                  <div className="bg-[#EBF0F5] flex flex-col gap-[2px] items-center py-[7px] w-full cursor-pointer">
                     <Image src={weather2} alt="weather" />
                     <p className="text-[10px] font-normal text-[#77818C]">
                       06-12 PM
                     </p>
                   </div>
-                  <div className="bg-[#EBF0F5] flex flex-col gap-[2px] items-center py-[7px] px-[5px] cursor-pointer">
+                  <div className="bg-[#EBF0F5] flex flex-col gap-[2px] items-center py-[7px] w-full cursor-pointer">
                     <Image src={weather3} alt="weather" />
                     <p className="text-[10px] font-normal text-[#77818C]">
                       12-06 PM
                     </p>
                   </div>
-                  <div className="bg-[#EBF0F5] flex flex-col gap-[2px] items-center py-[7px] px-[5px] rounded-tr-[7px] rounded-br-[7px] cursor-pointer">
+                  <div className="bg-[#EBF0F5] flex flex-col gap-[2px] items-center py-[7px] w-full rounded-tr-[7px] rounded-br-[7px] cursor-pointer">
                     <Image src={weather4} alt="weather" />
                     <p className="text-[10px] font-normal text-[#77818C]">
                       06-12 AM
@@ -143,46 +149,44 @@ const FlightFilter = () => {
             <div>
               <div>
                 <div className="group px-[6px] py-2 text-[#5E6D77] text-sm font-normal flex items-center gap-x-[6px] justify-between hover:bg-[#ebf0f5] rounded transition duration-300 ease-in-out">
-                  <div className="flex items-center">
+                  <div className="flex items-center gap-2">
                     <input
                       className="bg-white rounded-sm border-[#5E6D77] appearance-none checked:bg-[#fe9a17] w-4 h-4 border-2 checked:border-[#04669F] checked:p-1 transition duration-300 ease-in-out cursor-pointer"
                       type="checkbox"
                       name=""
                       id=""
                     />
+                    <p className="truncate">Biman Bangladesh Airlines</p>
                   </div>
                   <div className="flex items-center justify-between gap-[4px]">
-                    <p className="w-[158px] truncate">
-                      Biman Bangladesh Airlines
-                    </p>
                     <p>৳5,661</p>
                   </div>
                 </div>
                 <div className="group px-[6px] py-2 text-[#5E6D77] text-sm font-normal flex items-center gap-x-[6px] justify-between hover:bg-[#ebf0f5] rounded transition duration-300 ease-in-out">
-                  <div className="flex items-center">
+                  <div className="flex items-center gap-2">
                     <input
                       className="bg-white rounded-sm border-[#5E6D77] appearance-none checked:bg-[#fe9a17] w-4 h-4 border-2 checked:border-[#04669F] checked:p-1 transition duration-300 ease-in-out cursor-pointer"
                       type="checkbox"
                       name=""
                       id=""
                     />
+                    <p className="truncate">Air Astra</p>
                   </div>
                   <div className="flex items-center justify-between gap-[4px]">
-                    <p className="w-[158px] truncate">Air Astra</p>
                     <p>৳5,776</p>
                   </div>
                 </div>
                 <div className="group px-[6px] py-2 text-[#5E6D77] text-sm font-normal flex items-center gap-x-[6px] justify-between hover:bg-[#ebf0f5] rounded transition duration-300 ease-in-out">
-                  <div className="flex items-center">
+                  <div className="flex items-center gap-2">
                     <input
                       className="bg-white rounded-sm border-[#5E6D77] appearance-none checked:bg-[#fe9a17] w-4 h-4 border-2 checked:border-[#04669F] checked:p-1 transition duration-300 ease-in-out cursor-pointer"
                       type="checkbox"
                       name=""
                       id=""
                     />
+                    <p className="truncate">NOVOAIR</p>
                   </div>
                   <div className="flex items-center gap-[4px]">
-                    <p className="w-[158px] truncate">NOVOAIR</p>
                     <p>৳5,766</p>
                   </div>
                 </div>

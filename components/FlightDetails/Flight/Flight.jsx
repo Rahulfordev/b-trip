@@ -1,14 +1,15 @@
 import React from "react";
 
-import FlightFilter from "../FlightFilter/FlightFilter";
+ 
 import FlightContent from "../FlightContent/FlightContent";
+import FlightFilters from "../FlightFilter/FlightFilters";
 
 const Flight = () => {
   return (
     <div className="bg-[#EBF0F4]">
-      <div className="max-w-[1292px] mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20">
+      <div className="max-w-[1292px] mx-auto">
         <div className="flex gap-4">
-          <FlightFilter />
+          <FlightFilters />
           <FlightContent />
         </div>
       </div>

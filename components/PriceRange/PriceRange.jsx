@@ -5,9 +5,9 @@ import ReactSlider from "react-slider";
 const PriceRange = () => {
   const [values, setValues] = useState([5190, 5850]);
   return (
-    <div className="w-full max-w-lg mx-auto text-center pt-2">
+    <div className="w-full lg:max-w-lg mx-auto text-center pt-2">
       <ReactSlider
-        className="relative w-48 h-1 bg-gray-300"
+        className="relative lg:w-48 h-1 bg-gray-300"
         thumbClassName="relative h-5 w-5 bg-[#FC9A16] rounded-full cursor-pointer -top-2 outline-none shadow-md"
         trackClassName="absolute top-0 bottom-0 bg-[#FC9A16] rounded-full"
         defaultValue={values}
