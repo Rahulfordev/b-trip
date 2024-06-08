@@ -16,7 +16,7 @@ const ClassSelection = () => {
           value="Economy"
           checked={selectedClass === "Economy"}
           onChange={() => setSelectedClass("Economy")}
-          className="form-radio h-4 w-4 text-[#04669F] bg-white border-gray-300 focus:ring-blue-500"
+          className="bg-white rounded-full border-[#5E6D77] appearance-none checked:bg-[#fe9a17] w-4 h-4 border-2 checked:border-[#04669F] checked:p-1 transition duration-300 ease-in-out cursor-pointer"
         />
         <label
           htmlFor="economy"
@@ -33,9 +33,12 @@ const ClassSelection = () => {
           value="Business"
           checked={selectedClass === "Business"}
           onChange={() => setSelectedClass("Business")}
-          className="form-radio h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+          className="bg-white rounded-full border-[#5E6D77] appearance-none checked:bg-[#fe9a17] w-4 h-4 border-2 checked:border-[#04669F] checked:p-1 transition duration-300 ease-in-out cursor-pointer"
         />
-        <label htmlFor="business" className="ml-2 text-sm font-semibold text-[#04669F]">
+        <label
+          htmlFor="business"
+          className="ml-2 text-sm font-semibold text-[#04669F]"
+        >
           Business
         </label>
       </div>
@@ -47,9 +50,12 @@ const ClassSelection = () => {
           value="First Class"
           checked={selectedClass === "First Class"}
           onChange={() => setSelectedClass("First Class")}
-          className="form-radio h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+          className="bg-white border-[#5E6D77] appearance-none checked:bg-[#fe9a17] w-4 h-4 rounded-full border-2 checked:border-[#04669F] checked:p-1 transition duration-300 ease-in-out cursor-pointer"
         />
-        <label htmlFor="first-class" className="ml-2 text-sm font-semibold text-[#04669F]">
+        <label
+          htmlFor="first-class"
+          className="ml-2 text-sm font-semibold text-[#04669F]"
+        >
           First Class
         </label>
       </div>
