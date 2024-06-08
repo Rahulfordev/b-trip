@@ -42,7 +42,7 @@ function ResponsiveNavbar({ dropdownOpen, toggleDropdown }) {
                 Home
               </Link>
               <Link
-                href="#"
+                href="/Flight-Details"
                 className="block px-3 py-2 text-base font-medium hover:bg-gray-100"
               >
                 Flight
